@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 1162.0687, g: 1113.06, b: 1265.854, a: 1}
+  m_IndirectSpecularColor: {r: 1162.0035, g: 1112.9971, b: 1265.5613, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -395,6 +395,8 @@ MonoBehaviour:
   rotDamping: 0.9
   playerRigidbody: {fileID: 1769817576}
   target: {fileID: 1477814360}
+  climbForce: 1000
+  climbDrag: 500
 --- !u!54 &240790632
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1616,6 +1618,8 @@ MonoBehaviour:
   rotDamping: 0.9
   playerRigidbody: {fileID: 1769817576}
   target: {fileID: 1147382843}
+  climbForce: 1000
+  climbDrag: 500
 --- !u!54 &1957687211
 Rigidbody:
   m_ObjectHideFlags: 0

@@ -11,13 +11,15 @@ public class PhysicsHand : MonoBehaviour
     [SerializeField] float rotDamping = 0.9f;
     [SerializeField] Rigidbody playerRigidbody;
     [SerializeField] Transform target;
-    Vector3 _previousPosition;
-    Rigidbody _rigidbody;
+    
 
     [Space]
     [Header("Springs")]
     [SerializeField] float climbForce = 1000f;
     [SerializeField] float climbDrag = 500f;
+    Vector3 _previousPosition;
+    Rigidbody _rigidbody;
+    bool _isColliding;
     void Start()
     {
         transform.position = target.position;
@@ -32,7 +34,8 @@ public class PhysicsHand : MonoBehaviour
     {
         PIDMovement();
         PIDRotation();
-        HookesLaw();
+        if (_isColliding) HookesLaw();
+        
 
     }
     void PIDMovement()
@@ -85,4 +88,13 @@ public class PhysicsHand : MonoBehaviour
         _previousPosition = transform.position;
         return drag;
     }
+    void OnCollisionEnter(Collision collision)
+    {
+        _isColliding = true; 
+    }
+    void OnCollisionExit(Collision other)
+    {
+        _isColliding = false;
+    }
+
 }
