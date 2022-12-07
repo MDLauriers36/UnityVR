@@ -5,31 +5,19 @@ using UnityEngine;
 public class Fire : MonoBehaviour
 {
     // Start is called before the first frame update
-    [SerializeField] float delay = 1f;
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
+    
+    public float nb = 0;
     void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag == "Fire")
         {
             //If the GameObject has the same tag as specified, output this message in the console
             Debug.Log("Do something else here");
-
-            IEnumerator DelayDeactivate(float _delay)
+            nb++;
+            if (nb >= 2)
             {
-                yield return new WaitForSeconds(_delay);
-                this.gameObject.SetActive(false);
+                Debug.Log("hey pelo");
             }
-            StartCoroutine(DelayDeactivate(delay));
         }
        
     }

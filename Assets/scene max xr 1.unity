@@ -1166,7 +1166,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 152b4b5fc7e1e814a9fab9b431db5b9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delay: 1
+  nb: 0
 --- !u!1 &396779100
 GameObject:
   m_ObjectHideFlags: 0
@@ -1879,7 +1879,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: eabcb42ab369f624d9e3851707891c01,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: eabcb42ab369f624d9e3851707891c01,
         type: 3}
@@ -1889,7 +1889,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: eabcb42ab369f624d9e3851707891c01,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: eabcb42ab369f624d9e3851707891c01,
         type: 3}
@@ -1960,6 +1960,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: eabcb42ab369f624d9e3851707891c01,
+        type: 3}
+      propertyPath: m_TagString
+      value: Fire
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
@@ -2112,8 +2117,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 0.8889939, z: 1.0000001}
+  m_Center: {x: 0, y: 0.45918688, z: 0.000000031044088}
 --- !u!114 &764007170
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2126,7 +2131,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 152b4b5fc7e1e814a9fab9b431db5b9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delay: 1
+  nb: 0
 --- !u!1 &916825131
 GameObject:
   m_ObjectHideFlags: 0
@@ -2223,7 +2228,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 152b4b5fc7e1e814a9fab9b431db5b9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delay: 1
+  nb: 0
+--- !u!65 &1142364451
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 239293879}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3.357113, y: 3.3284426, z: 3.4534042}
+  m_Center: {x: -0.507709, y: 1.66977, z: 0}
 --- !u!4 &1147382843 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4177470078880852193, guid: 66ef2c16d1e3dbd43b831a68f2589f80,
@@ -4637,6 +4655,7 @@ GameObject:
   - component: {fileID: 2076599198}
   - component: {fileID: 2076599202}
   - component: {fileID: 2076599203}
+  - component: {fileID: 2076599204}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -4759,8 +4778,21 @@ MonoBehaviour:
   firstSecond: {fileID: 1994774154}
   secondSecond: {fileID: 1165606233}
   goBack: {fileID: 61620600}
-  flashTimer: 0
+  fire: {fileID: 2076599204}
   flashDuration: 1
+--- !u!114 &2076599204
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2076599197}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 152b4b5fc7e1e814a9fab9b431db5b9a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nb: 0
 --- !u!1 &2085169237
 GameObject:
   m_ObjectHideFlags: 0

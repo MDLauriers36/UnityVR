@@ -24,7 +24,7 @@ public class Timer : MonoBehaviour {
     [SerializeField]
     private GameObject goBack;
     [SerializeField]
-
+    public Fire fire;
     //Use this for a single text object
     //[SerializeField]
     //private TextMeshProUGUI timerText;
@@ -55,6 +55,11 @@ public class Timer : MonoBehaviour {
             UpdateTimerDisplay(timer);
         } else {
             FlashTimer();
+        }
+
+        if(fire.nb >= 2)
+        {
+            Debug.Log("hey pelo");
         }
     }
 
