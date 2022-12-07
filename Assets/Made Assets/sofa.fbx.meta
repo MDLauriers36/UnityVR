@@ -10,6 +10,11 @@ ModelImporter:
       name: sofa_base
     second: {fileID: -7471954334935620855, guid: c2d3bd2a9d9ca8c41b19a3703a760912,
       type: 3}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: sofa_coussine
+    second: {fileID: 2100000, guid: b35d336e3131c5e4cb7ed77eb5da7ea6, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -95,7 +100,7 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    globalScale: 0.099999994
+    globalScale: 10
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0
