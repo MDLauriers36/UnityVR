@@ -1,4 +1,6 @@
 using UnityEngine;
+using System.Collections;
+using System.Collections.Generic;
 using TMPro;
 
 public class Timer : MonoBehaviour {
@@ -124,4 +126,5 @@ public class Timer : MonoBehaviour {
         //Use this for a single text object
         //timerText.enabled = enabled;
     }
+
 }
