@@ -10,7 +10,7 @@ public class Timer : MonoBehaviour {
     [SerializeField]
     private bool countDown = true;
 
-    private float timer;
+    public float horloge;
     [SerializeField]
     private TextMeshProUGUI firstMinute;
     [SerializeField]
@@ -23,8 +23,10 @@ public class Timer : MonoBehaviour {
     private TextMeshProUGUI secondSecond;
     [SerializeField]
     private GameObject goBack;
-    [SerializeField]
+
+    [SerializeField] GameObject Cadeaux;
     public Fire fire;
+    
     //Use this for a single text object
     //[SerializeField]
     //private TextMeshProUGUI timerText;
@@ -32,47 +34,51 @@ public class Timer : MonoBehaviour {
     private float flashTimer;
     [SerializeField]
     private float flashDuration = 1f; //The full length of the flash
-
+    void Awake()
+    {
+        fire = Cadeaux.GetComponent<Fire>();
+    }
     private void Start() {
         ResetTimer();
     }
 
     private void ResetTimer() {
         if (countDown) {
-            timer = timerDuration;
+            horloge = timerDuration;
         } else {
-            timer = 0;
+            horloge = 0;
         }
         SetTextDisplay(true);
     }
 
     void Update() {
-        if (countDown && timer > 0) {
-            timer -= Time.deltaTime;
-            UpdateTimerDisplay(timer);
-        } else if (!countDown && timer < timerDuration) {
-            timer += Time.deltaTime;
-            UpdateTimerDisplay(timer);
+        if (countDown && horloge > 0) {
+            horloge -= Time.deltaTime;
+            UpdateTimerDisplay(horloge);
+        } else if (!countDown && horloge < timerDuration) {
+            horloge += Time.deltaTime;
+            UpdateTimerDisplay(horloge);
         } else {
             FlashTimer();
-        }
-
-        if(fire.nb >= 2)
-        {
-            Debug.Log("hey pelo");
-        }
+        } 
     }
-
     private void UpdateTimerDisplay(float time) {
         if (time < 0) {
             time = 0;
             goBack.SetActive(true);
+           
+            Debug.Log(fire.nb);
         }
 
         if (time > 3660) {
             Debug.LogError("Timer cannot display values above 3660 seconds");
             ErrorDisplay();
             return;
+        }
+
+        if (fire.nb == 2)
+        {
+            Debug.Log(fire.nb);
         }
 
         float minutes = Mathf.FloorToInt(time / 60);
@@ -87,7 +93,6 @@ public class Timer : MonoBehaviour {
         //Use this for a single text object
         //timerText.text = currentTime.ToString();
     }
-
     private void ErrorDisplay() {
         firstMinute.text = "8";
         secondMinute.text = "8";
@@ -100,14 +105,14 @@ public class Timer : MonoBehaviour {
     }
 
     private void FlashTimer() {
-        if(countDown && timer != 0) {
-            timer = 0;
-            UpdateTimerDisplay(timer);
+        if(countDown && horloge != 0) {
+            horloge = 0;
+            UpdateTimerDisplay(horloge);
         }
 
-        if(!countDown && timer != timerDuration) {
-            timer = timerDuration;
-            UpdateTimerDisplay(timer);
+        if(!countDown && horloge != timerDuration) {
+            horloge = timerDuration;
+            UpdateTimerDisplay(horloge);
         }
 
         if(flashTimer <= 0) {
