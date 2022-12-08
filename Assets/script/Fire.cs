@@ -6,18 +6,27 @@ public class Fire : MonoBehaviour
 {
     // Start is called before the first frame update
     
-    public float nb = 0;
+    public float nb;
+
+    public Timer horloge;
+    private GameObject win;
+
+    
     void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag == "Fire")
         {
+
             //If the GameObject has the same tag as specified, output this message in the console
-            Debug.Log("Do something else here");
+            Debug.Log("Fais dequoi");
             nb++;
-            if (nb >= 2)
-            {
-                Debug.Log("hey pelo");
-            }
+               
+             
+                if(nb >= 2)
+                {
+                    Debug.Log("plus que 2");
+                }
+            
         }
        
     }
