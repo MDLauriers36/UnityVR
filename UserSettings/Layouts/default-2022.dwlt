@@ -23,7 +23,7 @@ MonoBehaviour:
   m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
-  m_Maximized: 0
+  m_Maximized: 1
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -889,7 +889,7 @@ MonoBehaviour:
   m_LastFolders:
   - Assets/script
   m_LastFoldersGridSize: -1
-  m_LastProjectPath: C:\Users\1868052\Documents\xr-unity-clone\UnityVR
+  m_LastProjectPath: C:\Users\1970980\Documents\GitHub\UnityVR
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
