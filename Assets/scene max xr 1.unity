@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 504.40988, g: 483.74808, b: 550.63513, a: 1}
+  m_IndirectSpecularColor: {r: 505.1015, g: 484.51196, b: 551.57916, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -220,7 +220,7 @@ GameObject:
   - component: {fileID: 61620601}
   m_Layer: 5
   m_Name: GoBack
-  m_TagString: Untagged
+  m_TagString: lose
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -493,6 +493,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cadeau vert (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8589506491008357291, guid: f235cddcfb259f149a3065afb1141222,
+        type: 3}
+      propertyPath: m_TagString
+      value: cadeau
       objectReference: {fileID: 0}
     - target: {fileID: 8971133110343649553, guid: f235cddcfb259f149a3065afb1141222,
         type: 3}
@@ -1660,7 +1665,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 0.241
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -2204,10 +2209,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 604956232}
-  - component: {fileID: 604956233}
   m_Layer: 7
   m_Name: Cadeaux
-  m_TagString: Fire
+  m_TagString: cadeau
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2231,20 +2235,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &604956233
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 604956231}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 152b4b5fc7e1e814a9fab9b431db5b9a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nb: 0
-  horloge: {fileID: 2076599203}
 --- !u!1 &605714180
 GameObject:
   m_ObjectHideFlags: 0
@@ -3279,6 +3269,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cadeau vert (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 8589506491008357291, guid: f235cddcfb259f149a3065afb1141222,
+        type: 3}
+      propertyPath: m_TagString
+      value: cadeau
+      objectReference: {fileID: 0}
     - target: {fileID: 8971133110343649553, guid: f235cddcfb259f149a3065afb1141222,
         type: 3}
       propertyPath: m_RootOrder
@@ -3633,7 +3628,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nb: 0
+  cadeau: {fileID: 604956231}
   horloge: {fileID: 2076599203}
+  win: {fileID: 61620600}
 --- !u!65 &1142364451
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4150,6 +4147,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cadeau vert (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 8589506491008357291, guid: f235cddcfb259f149a3065afb1141222,
+        type: 3}
+      propertyPath: m_TagString
+      value: cadeau
+      objectReference: {fileID: 0}
     - target: {fileID: 8971133110343649553, guid: f235cddcfb259f149a3065afb1141222,
         type: 3}
       propertyPath: m_RootOrder
@@ -4419,6 +4421,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cadeau vert (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8589506491008357291, guid: f235cddcfb259f149a3065afb1141222,
+        type: 3}
+      propertyPath: m_TagString
+      value: cadeau
       objectReference: {fileID: 0}
     - target: {fileID: 8971133110343649553, guid: f235cddcfb259f149a3065afb1141222,
         type: 3}
@@ -5174,6 +5181,22 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!54 &1516394645
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1516394641}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1001 &1572104435
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5622,7 +5645,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: fb665a486f2bd2640b3f28e857230dbe,
         type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: Fire
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects:
@@ -6028,7 +6051,6 @@ GameObject:
   - component: {fileID: 2076599199}
   - component: {fileID: 2076599198}
   - component: {fileID: 2076599203}
-  - component: {fileID: 2076599204}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -6141,22 +6163,8 @@ MonoBehaviour:
   secondSecond: {fileID: 1165606233}
   goBack: {fileID: 61620600}
   Cadeaux: {fileID: 604956231}
-  fire: {fileID: 2076599204}
+  fire: {fileID: 0}
   flashDuration: 1
---- !u!114 &2076599204
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2076599197}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 152b4b5fc7e1e814a9fab9b431db5b9a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nb: 0
-  horloge: {fileID: 2076599203}
 --- !u!1 &2085169237
 GameObject:
   m_ObjectHideFlags: 0
@@ -6410,6 +6418,22 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!54 &2091379550
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2091379546}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &2115577291 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2586958729036936973, guid: 66ef2c16d1e3dbd43b831a68f2589f80,

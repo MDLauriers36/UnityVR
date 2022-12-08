@@ -345,7 +345,6 @@ GameObject:
   - component: {fileID: 8932159189735035251}
   - component: {fileID: 8932159189735035250}
   - component: {fileID: 8932159189735035253}
-  - component: {fileID: 852527423175295593}
   m_Layer: 7
   m_Name: Cadeau vert (1)
   m_TagString: Fire
@@ -516,17 +515,3 @@ MonoBehaviour:
   m_ForceGravityOnDetach: 0
   m_RetainTransformParent: 1
   m_AttachPointCompatibilityMode: 0
---- !u!114 &852527423175295593
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8589506491008357291}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 152b4b5fc7e1e814a9fab9b431db5b9a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nb: 0
-  horloge: {fileID: 0}

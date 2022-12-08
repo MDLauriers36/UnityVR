@@ -34,10 +34,7 @@ public class Timer : MonoBehaviour {
     private float flashTimer;
     [SerializeField]
     private float flashDuration = 1f; //The full length of the flash
-    void Awake()
-    {
-        fire = Cadeaux.GetComponent<Fire>();
-    }
+    
     private void Start() {
         ResetTimer();
     }
@@ -74,11 +71,6 @@ public class Timer : MonoBehaviour {
             Debug.LogError("Timer cannot display values above 3660 seconds");
             ErrorDisplay();
             return;
-        }
-
-        if (fire.nb == 2)
-        {
-            Debug.Log(fire.nb);
         }
 
         float minutes = Mathf.FloorToInt(time / 60);
