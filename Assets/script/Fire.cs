@@ -6,9 +6,9 @@ public class Fire : MonoBehaviour
 {
     // Start is called before the first frame update
     
-    public float nb;
+    public static float nb;
     public GameObject cadeau;
-    public Timer horloge;
+    public Temps horloge;
     public GameObject win;
 
     
@@ -19,11 +19,23 @@ public class Fire : MonoBehaviour
         if (collision.gameObject.tag == "cadeau")
         {
             Debug.Log("cadeau");
+            nb++;
+            if(Temps.getHorloge() !> 0)
+            {
+                Debug.Log("Il est trop tard");
+            }
+            if(nb > 2 && Temps.getHorloge() > 0)
+            {
+                win.SetActive(true);
+            }
         }
         else if (collision.gameObject.tag == "Fire")
         {
             Debug.Log("Fire");
         }
     }
-
+    public static float getNb()
+    {
+        return nb;
+    }
 }
