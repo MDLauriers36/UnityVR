@@ -2,6 +2,7 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class Temps : MonoBehaviour {
     [SerializeField]
@@ -146,4 +147,6 @@ public class Temps : MonoBehaviour {
     public static float getHorloge() {
         return horloge;
     }
+
+  
 }

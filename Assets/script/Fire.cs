@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Fire : MonoBehaviour
 {
@@ -37,5 +38,17 @@ public class Fire : MonoBehaviour
     public static float getNb()
     {
         return nb;
+    }
+    public void resetScene()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name); // loads current scene
+        nb = 0;
+        win.SetActive(false);
+    }
+    public void goBack()
+    {
+        SceneManager.LoadScene("scene max xr 2"); // loads current scene
+        nb = 0;
+        win.SetActive(false);
     }
 }
